@@ -74,3 +74,19 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 - **Run every possible test** - `pytest`
 - **Run filtered tests** - `pytest -k some_filter_text`
 - **Run in watch mode** - `ptw` or `pytest-watch`
+
+# Table of Contents
+
+## Reverse an Array
+Return an array in reverse order
+
+### Challenge
+Write a function called `reverseArray` which takes an array as an argument. Without utilizing any of the built-in methods available to your language, return an array with elements in reversed order.
+
+### Approach & Efficiency
+Splice the array (array[::-1])
+Time complexity: O(n), splice loops through the original area to get values
+Space complexity:0(n), splice creates a new array which we will return
+
+### Solution
+![Whiteboard image](./assets/array-reverse.png)
