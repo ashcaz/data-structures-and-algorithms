@@ -90,3 +90,18 @@ Space complexity:0(n), splice creates a new array which we will return
 
 ### Solution
 ![Whiteboard image](./assets/array-reverse.png)
+
+## Shift an array
+Insert a number at the midpoint of the array
+
+### Challenge
+Write a function called `insertShiftArray` which takes in an array and the value to be added. Without utilizing any of the built-in methods available to your language, return an array with the new value added at the middle index.
+
+### Approach & Efficiency
+Divide the length of the array by 2 and use insert() method to insert the number at the midpoint of the array
+
+Time complexity: O(n), insert partially loops through the original to shift values
+Space complexity:0(n), insert adds a values to the exsisting array
+
+### Solution
+![Whiteboard image](./assets/array-shift.png)
