@@ -105,3 +105,18 @@ Space complexity:0(n), insert adds a values to the exsisting array
 
 ### Solution
 ![Whiteboard image](./assets/array-shift.png)
+
+## Array Binary Search
+Find the key in a sorted array by binary search
+
+### Challenge
+Write a function called `BinarySearch` which takes in 2 parameters: a sorted array and the search key. Without utilizing any of the built-in methods available to your language, return the index of the array’s element that is equal to the search key, or -1 if the element does not exist.
+
+### Approach & Efficiency
+use a while loop and if else statements to split the array into sections based on high or low till the value is found and returned
+
+Time complexity: O(n), using a while loop
+Space complexity:0(1), not creating any extra data structures
+
+### Solution
+![Whiteboard image](./assets/array-binary-search.png)
