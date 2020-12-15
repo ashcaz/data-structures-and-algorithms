@@ -25,11 +25,9 @@ def BinarySearch(sorted_array:list, search_key:int) -> int:
       elif search_key < sorted_array[mid]:
           end = mid -1
           mid = (end + start) // 2
-          print(f'1: {start}, {mid}, {end}')
       elif search_key > sorted_array[mid]:
           start = mid +1
           mid = (end + start) // 2
-          print(f'2: {start}, {mid}, {end}')
         
   except IndexError:
     return -1
