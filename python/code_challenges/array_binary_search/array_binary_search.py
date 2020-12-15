@@ -13,17 +13,23 @@ def BinarySearch(sorted_array:list, search_key:int) -> int:
   mid = end // 2
   print(start, mid, end, search_key)
    
-  while len(sorted_array) <= mid >=1:
-    print(f'{mid}')
-    if search_key == sorted_array[mid]:
-      return mid
-    elif search_key < sorted_array[mid]:
-        end = mid -1
-        mid = (end + start) // 2
-        print(f'1: {start}, {mid}, {end}')
-    elif search_key > sorted_array[mid]:
-        start = mid +1
-        mid = (end + start) // 2
-        print(f'2: {start}, {mid}, {end}')
+  if end == 1:
+    return 0
+  if end == 0:
+    return -1
 
-  return -1
+  try:
+    while mid >=1:
+      if search_key == sorted_array[mid]:
+        return mid
+      elif search_key < sorted_array[mid]:
+          end = mid -1
+          mid = (end + start) // 2
+          print(f'1: {start}, {mid}, {end}')
+      elif search_key > sorted_array[mid]:
+          start = mid +1
+          mid = (end + start) // 2
+          print(f'2: {start}, {mid}, {end}')
+        
+  except IndexError:
+    return -1
