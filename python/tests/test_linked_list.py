@@ -18,15 +18,15 @@ def test_instantiate_empty_ll():
 def test_insert_into_ll():
   node = Node(1)
   new_ll = LinkedList(node)
+  print(new_ll)
   actual = new_ll.insert(2)
   expected = -1
   assert actual == expected
 
-@pytest.mark.skip("pending")
-def test_head_ll():
-  node = Node(1)
-  actual = LinkedList(node)
-  expected = -1
+# @pytest.mark.skip("pending")
+def test_head_ll(linked_list_one):
+  actual = linked_list_one.includes(1)
+  expected = True
   assert actual == expected
 
 @pytest.mark.skip("pending")
@@ -61,6 +61,19 @@ def test_return_collection_of_values():
 #######################
 # Fixtures
 #######################
+
+@pytest.fixture
+def linked_list_one():
+    node = Node(0)
+    linked_list = LinkedList(node)
+    node_values = list(range(1,10))
+    for num in node_values:
+        linked_list.insert(num)
+    
+    return linked_list
+        
+
+
 @pytest.fixture(autouse=True)
 def clean():
     """runs before each test automatically
