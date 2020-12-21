@@ -147,4 +147,15 @@ Write tests to prove the following functionality
 7. Can properly return a collection of all the values that exist in the linked list
 
 ## Approach & Efficency
+I used while loops to search for values in a linked list. Big O time - O(n) because of the while loop. It is directly perportional to length of the Linked list
+Big O space - O(1) because i am not creatign any new data structures just assessing what is already there
+
 ## API
+
+Linked List methods:
+
+1. __init__ : upon instantiating a linked list the init method will assign head to the node that was passed into the class initiator. If no value is passed in None will be assigned and an empty Linked List will be created.
+2. __str__: this will return a readable output of the linked lists values when the link list is printed
+3. insert: this method will insert a node a the front of the linked list (will become the new head)
+4. includes: this method will return true if a value is found in a linked list. It will return false if the value is not found
+5. create_collection: this method will return a list of all the values found in the linked list.

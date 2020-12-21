@@ -11,13 +11,30 @@ class LinkedList:
     """
     instances = 0
 
-    def __init__(self, head, values=None):
+    def __init__(self, head=None):
         self.head = head
-        self.length = 1
+        
+        if self.head == None:
+            self.length = 0
+        else:
+            self.length = 1
+
         LinkedList.instances+=1
 
-    # def __str__(self):
-        # pass
+    def __str__(self):
+        dunder_str = ''
+        current = self.head
+
+        if current == None:
+            return 'This is an empty Link List'
+
+        while current is not None:
+            dunder_str += f'{ {current.value} } -> '
+            current = current.next
+        
+        dunder_str += f'NULL'
+
+        return dunder_str
 
     def insert(self, value):
         node = Node(value)
@@ -26,7 +43,6 @@ class LinkedList:
             node.next = self.head
         self.head = node
         self.length+=1
-        # return self
 
     def includes(self, search_value) -> bool:
         current = self.head
@@ -36,12 +52,21 @@ class LinkedList:
             current = current.next
         return False
 
-    @classmethod
-    def ll_total(cls):
-        return cls.instances
-    
-    # def make_str(self):
-    #     dunder_str = ''
-    #     while self.next is not None:
-    #         dunder_str = f'{self.head.value}'
+    def create_collection(self)-> list:
+        collection =[]
+        current = self.head
 
+        while current is not None:
+            collection.append(current.value)
+            current = current.next
+
+        return collection
+
+    @classmethod
+    def linked_lists_total(cls):
+        return cls.instances
+
+
+node = Node(1)
+ll = LinkedList(node)
+print(ll)
