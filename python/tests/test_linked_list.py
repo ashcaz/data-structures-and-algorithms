@@ -102,10 +102,10 @@ def test_k_greater_than_length_of_ll(long_linked_list):
   assert actual == expected
 
 # @pytest.mark.skip("pending")
-# def test_k_and_length_of_ll_are_the_same(long_linked_list):
-#   actual = 
-#   expected = 
-#   assert actual == expected
+def test_k_and_length_of_ll_are_the_same(long_linked_list):
+  actual = long_linked_list.kth_from_end(10)
+  expected = 9
+  assert actual == expected
 
 # @pytest.mark.skip("pending")
 # def test_k_not_positive_integer(long_linked_list):
