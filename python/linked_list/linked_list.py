@@ -7,6 +7,9 @@ class LinkedList:
         # initialization here
         pass
 
+<<<<<<< Updated upstream
     def some_method(self):
         # method body here
         pass
+=======
+>>>>>>> Stashed changes
