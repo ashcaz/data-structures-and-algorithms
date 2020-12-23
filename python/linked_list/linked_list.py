@@ -127,6 +127,31 @@ class LinkedList:
         
         return f'Value {search_val} does not exist in the Linked list'
 
+    def kth_from_end(self, k:int) -> int:
+        if not self.length:
+            return "This method can not be used on an empty linked list"
+        
+        if k < 0:
+            return "This method can not be used with a negative integer"
+
+        if k > self.length:
+            return f'Value {k} is longer then the length of Linked list'
+        
+        counter = 0
+        search_index = self.length - k
+        current = self.head
+
+        while current is not None:
+            if search_index == counter:
+                return current.value
+            counter +=1
+            current = current.next
+
+
+
+
+
+
     @classmethod
     def linked_lists_total(cls):
         return cls.instances

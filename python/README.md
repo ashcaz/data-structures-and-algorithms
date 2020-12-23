@@ -176,3 +176,18 @@ Space complexity: 0(1), we are not creating any new data structures
 
 ### Solution
 ![Whiteboard image](./assets/CC_class-6.png)
+
+## CC-7: Link List - kth from the end
+Write a method that return the value of a node kth from the end of the linked list.
+
+### Challenge
+Write a method for the Linked List class which takes a number, `k`, as a parameter. Return the node’s value that is `k` from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+### Approach & Efficiency
+Created a length property in the linked list class that keeps track of the length of the linked list. I use that to fid out the position of the node kth from the end.
+
+Time complexity: O(n), linear. The larger the linked list the more time it will take to traverse it
+Space complexity: 0(1), we are not creating any new data structures
+
+### Solution
+![Whiteboard image](./assets/CC7.png)
