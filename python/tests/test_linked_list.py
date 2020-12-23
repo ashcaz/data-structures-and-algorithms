@@ -60,40 +60,40 @@ def test_return_collection_of_values(short_linked_list):
 
 # @pytest.mark.skip("pending")
 def test_add_node_to_end(short_linked_list):
-  print(short_linked_list)
   actual = short_linked_list.append(8)
   expected = '{ 2 } -> { 1 } -> { 0 } -> { 8 } -> NULL'
   assert actual == expected
 
 # @pytest.mark.skip("pending")
-# def test_add_multiple_nodes_to_end():
-#   actual = 
-#   expected = 
-#   assert actual == expected
+def test_add_multiple_nodes_to_end(short_linked_list):
+  short_linked_list.append(8)
+  actual = short_linked_list.append(27)
+  expected = '{ 2 } -> { 1 } -> { 0 } -> { 8 } -> { 27 } -> NULL'
+  assert actual == expected
 
 # @pytest.mark.skip("pending")
-# def test_insert_node_before_node_in_middle():
-#   actual = 
-#   expected = 
-#   assert actual == expected
+def test_insert_node_before_node_in_middle(short_linked_list):
+  actual = short_linked_list.insertBefore(1,44)
+  expected = '{ 2 } -> { 44 } -> { 1 } -> { 0 } -> NULL'
+  assert actual == expected
 
 # @pytest.mark.skip("pending")
-# def test_insert_node_before_first_node():
-#   actual = 
-#   expected = 
-#   assert actual == expected
+def test_insert_node_before_first_node(short_linked_list):
+  actual = short_linked_list.insertBefore(2,44)
+  expected = '{ 44 } -> { 2 } -> { 1 } -> { 0 } -> NULL'
+  assert actual == expected
 
 # @pytest.mark.skip("pending")
-# def test_insert_node_after_node_in_middle():
-#   actual = 
-#   expected = 
-#   assert actual == expected
+def test_insert_node_after_node_in_middle(short_linked_list):
+  actual = short_linked_list.insertAfter(1,100)
+  expected = '{ 2 } -> { 1 } -> { 100 } -> { 0 } -> NULL'
+  assert actual == expected
 
 # @pytest.mark.skip("pending")
-# def test_insert_node_before_first_node():
-#   actual = 
-#   expected = 
-#   assert actual == expected
+def test_insert_node_after_last_node(short_linked_list):
+  actual = short_linked_list.insertAfter(0,100)
+  expected = '{ 2 } -> { 1 } -> { 0 } -> { 100 } -> NULL'
+  assert actual == expected
 
 
 
