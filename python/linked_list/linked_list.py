@@ -29,7 +29,7 @@ class LinkedList:
             return 'This is an empty Link List'
 
         while current is not None:
-            dunder_str += f'{ {current.value} } -> '
+            dunder_str += f'{{ {current.value} }} -> '
             current = current.next
         
         dunder_str += f'NULL'
@@ -62,13 +62,33 @@ class LinkedList:
 
         return collection
 
-    def append(self, val):
-        pass
+    def append(self, val) -> str:
+        """[method will add a new node on to the end of the linked list]
+
+        Args:
+            val ([type]): [value of the new node]
+
+        Returns:
+            [str]: [__str__]
+        """
+        if not self.length:
+            return "This method can not be used on an empty linked list"
+        
+        current = self.head
+        while current is not None:
+
+            if current.next is None:
+                node = Node(val)
+                current.next = node
+                return self.__str__()
+            
+            current = current.next
+
 
     def insertBefore(self, search_val,new_value):
         pass
 
-    def insertBefore(self, search_val,new_value):
+    def insertAfter(self, search_val,new_value):
         pass
 
     @classmethod
