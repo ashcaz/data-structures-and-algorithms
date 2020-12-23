@@ -7,8 +7,7 @@ def test_import():
     assert LinkedList
 
 # @pytest.mark.skip("pending")
-def test_instantiate_empty_ll():
-  empty_linked_list = LinkedList()
+def test_instantiate_empty_ll(empty_linked_list):
   actual = empty_linked_list.length
   expected = 0
   assert actual == expected
@@ -120,10 +119,10 @@ def test_ll_size_of_one(one_node_linked_list):
   assert actual == expected
 
 # @pytest.mark.skip("pending")
-# def test_k_happy_path(long_linked_list):
-#   actual = 
-#   expected = 
-#   assert actual == expected
+def test_k_happy_path(long_linked_list):
+  actual = long_linked_list.kth_from_end(4)
+  expected = 3
+  assert actual == expected
 
 #######################
 # Fixtures
@@ -153,6 +152,12 @@ def short_linked_list():
 def one_node_linked_list():
     node = Node(0)
     linked_list = LinkedList(node)
+    
+    return linked_list
+
+@pytest.fixture
+def empty_linked_list():
+    linked_list = LinkedList()
     
     return linked_list
 
