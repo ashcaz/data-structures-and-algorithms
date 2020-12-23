@@ -130,11 +130,11 @@ class LinkedList:
     def kth_from_end(self, k:int) -> int:
         if not self.length:
             return "This method can not be used on an empty linked list"
-        
-        if k < 0:
+        elif self.length == 1:
+            return f'This Linked List only has one node with the value of {self.head.value}'
+        elif k < 0:
             return "This method can not be used with a negative integer"
-
-        if k > self.length:
+        elif k > self.length:
             return f'Value {k} is longer then the length of Linked list'
         
         counter = 0

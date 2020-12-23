@@ -114,10 +114,10 @@ def test_k_not_positive_integer(long_linked_list):
   assert actual == expected
 
 # @pytest.mark.skip("pending")
-# def test_ll_size_of_one(long_linked_list):
-#   actual = 
-#   expected = 
-#   assert actual == expected
+def test_ll_size_of_one(one_node_linked_list):
+  actual = one_node_linked_list.kth_from_end(0) 
+  expected = 'This Linked List only has one node with the value of 0'
+  assert actual == expected
 
 # @pytest.mark.skip("pending")
 # def test_k_happy_path(long_linked_list):
@@ -149,6 +149,12 @@ def short_linked_list():
     
     return linked_list
 
+@pytest.fixture
+def one_node_linked_list():
+    node = Node(0)
+    linked_list = LinkedList(node)
+    
+    return linked_list
 
 @pytest.fixture(autouse=True)
 def clean():
