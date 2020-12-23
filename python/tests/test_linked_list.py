@@ -6,14 +6,15 @@ from linked_list.linked_list import Node, LinkedList
 def test_import():
     assert LinkedList
 
-@pytest.mark.skip("pending")
+
+# @pytest.mark.skip("pending")
 def test_instantiate_empty_ll():
   empty_linked_list = LinkedList()
   actual = empty_linked_list.length
   expected = 0
   assert actual == expected
 
-@pytest.mark.skip("pending")
+# @pytest.mark.skip("pending")
 def test_insert_into_ll(long_linked_list):
   length = long_linked_list.length
   long_linked_list.insert(22)
@@ -21,15 +22,14 @@ def test_insert_into_ll(long_linked_list):
   expected = length+1
   assert actual == expected
 
-@pytest.mark.skip("pending")
+# @pytest.mark.skip("pending")
 def test_head_ll(short_linked_list):
   short_linked_list.insert(27)
   actual = short_linked_list.head.value
   expected = 27
   assert actual == expected
   
-
-@pytest.mark.skip("pending")
+# @pytest.mark.skip("pending")
 def test_insert_multiple_nodes_ll():
   node = Node(1)
   ll = LinkedList(node)
@@ -40,19 +40,19 @@ def test_insert_multiple_nodes_ll():
   expected = 4
   assert actual == expected
 
-@pytest.mark.skip("pending")
+# @pytest.mark.skip("pending")
 def test_value_found_in_ll(long_linked_list):
   actual = long_linked_list.includes(1)
   expected = True
   assert actual == expected
 
-@pytest.mark.skip("pending")
+# @pytest.mark.skip("pending")
 def test_value_not_found_in_ll(long_linked_list):
   actual = long_linked_list.includes(22)
   expected = False
   assert actual == expected
 
-@pytest.mark.skip("pending")
+# @pytest.mark.skip("pending")
 def test_return_collection_of_values(short_linked_list):
   actual = short_linked_list.create_collection()
   expected = [2,1,0]
@@ -94,7 +94,6 @@ def test_insert_node_after_last_node(short_linked_list):
   actual = short_linked_list.insertAfter(0,100)
   expected = '{ 2 } -> { 1 } -> { 0 } -> { 100 } -> NULL'
   assert actual == expected
-
 
 
 #######################

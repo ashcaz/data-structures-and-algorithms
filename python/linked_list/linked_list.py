@@ -29,7 +29,9 @@ class LinkedList:
             return 'This is an empty Link List'
 
         while current is not None:
+
             dunder_str += f'{{ {current.value} }} -> '
+
             current = current.next
         
         dunder_str += f'NULL'
@@ -61,6 +63,7 @@ class LinkedList:
             current = current.next
 
         return collection
+
 
     def append(self, val) -> str:
         """[method will add a new node on to the end of the linked list]
