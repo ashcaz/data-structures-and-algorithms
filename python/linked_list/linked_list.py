@@ -29,7 +29,9 @@ class LinkedList:
             return 'This is an empty Link List'
 
         while current is not None:
-            dunder_str += f'{ {current.value} } -> '
+
+            dunder_str += f'{{ {current.value} }} -> '
+
             current = current.next
         
         dunder_str += f'NULL'
@@ -62,11 +64,74 @@ class LinkedList:
 
         return collection
 
+
+    def append(self, val) -> str:
+        """[method will add a new node on to the end of the linked list]
+
+        Args:
+            val ([type]): [value of the new node]
+
+        Returns:
+            [str]: [__str__]
+        """
+        if not self.length:
+            return "This method can not be used on an empty linked list"
+        
+        current = self.head
+        while current is not None:
+
+            if current.next is None:
+                node = Node(val)
+                current.next = node
+                self.length+=1
+                return self.__str__()
+            
+            current = current.next
+
+
+    def insertBefore(self, search_val, new_value)-> str:
+        
+        if not self.length:
+            return "This method can not be used on an empty linked list"
+
+        if self.head.value == search_val:
+            self.insert(new_value)
+            return self.__str__()
+        
+        current = self.head
+        while current is not None:
+
+            if current.next.value == search_val:
+                node = Node(new_value)
+                node.next = current.next
+                self.length+=1
+                current.next = node
+                return self.__str__()
+            
+            current = current.next
+        
+        return f'Value {search_val} does not exist in the Linked list'
+
+    def insertAfter(self, search_val, new_value) -> str:
+        if not self.length:
+            return "This method can not be used on an empty linked list"
+        
+        current = self.head
+        while current is not None:
+
+            if current.value == search_val:
+                node = Node(new_value)
+                node.next = current.next
+                self.length+=1
+                current.next = node
+                return self.__str__()
+            
+            current = current.next
+        
+        return f'Value {search_val} does not exist in the Linked list'
+
     @classmethod
     def linked_lists_total(cls):
         return cls.instances
 
 
-node = Node(1)
-ll = LinkedList(node)
-print(ll)
