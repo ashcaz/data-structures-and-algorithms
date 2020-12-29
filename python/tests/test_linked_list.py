@@ -6,8 +6,11 @@ from linked_list.linked_list import Node, LinkedList
 def test_import():
     assert LinkedList
 
+
+
 # @pytest.mark.skip("pending")
-def test_instantiate_empty_ll(empty_linked_list):
+def test_instantiate_empty_ll():
+  empty_linked_list = LinkedList()
   actual = empty_linked_list.length
   expected = 0
   assert actual == expected
@@ -27,7 +30,6 @@ def test_head_ll(short_linked_list):
   expected = 27
   assert actual == expected
   
-
 # @pytest.mark.skip("pending")
 def test_insert_multiple_nodes_ll():
   node = Node(1)
@@ -123,6 +125,7 @@ def test_k_happy_path(long_linked_list):
   actual = long_linked_list.kth_from_end(4)
   expected = 3
   assert actual == expected
+
 
 #######################
 # Fixtures

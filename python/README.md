@@ -177,6 +177,7 @@ Space complexity: 0(1), we are not creating any new data structures
 ### Solution
 ![Whiteboard image](./assets/CC_class-6.png)
 
+
 ## CC-7: Link List - kth from the end
 Write a method that return the value of a node kth from the end of the linked list.
 
@@ -191,3 +192,4 @@ Space complexity: 0(1), we are not creating any new data structures
 
 ### Solution
 ![Whiteboard image](./assets/CC7.png)
+
