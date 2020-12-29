@@ -7,6 +7,7 @@ def test_import():
     assert LinkedList
 
 
+
 # @pytest.mark.skip("pending")
 def test_instantiate_empty_ll():
   empty_linked_list = LinkedList()
@@ -95,6 +96,36 @@ def test_insert_node_after_last_node(short_linked_list):
   expected = '{ 2 } -> { 1 } -> { 0 } -> { 100 } -> NULL'
   assert actual == expected
 
+# @pytest.mark.skip("pending")
+def test_k_greater_than_length_of_ll(long_linked_list):
+  actual = long_linked_list.kth_from_end(15)
+  expected = 'Value 15 is longer then the length of Linked list'
+  assert actual == expected
+
+# @pytest.mark.skip("pending")
+def test_k_and_length_of_ll_are_the_same(long_linked_list):
+  actual = long_linked_list.kth_from_end(10)
+  expected = 9
+  assert actual == expected
+
+# @pytest.mark.skip("pending")
+def test_k_not_positive_integer(long_linked_list):
+  actual = long_linked_list.kth_from_end(-2)
+  expected = "This method can not be used with a negative integer"
+  assert actual == expected
+
+# @pytest.mark.skip("pending")
+def test_ll_size_of_one(one_node_linked_list):
+  actual = one_node_linked_list.kth_from_end(0) 
+  expected = 'This Linked List only has one node with the value of 0'
+  assert actual == expected
+
+# @pytest.mark.skip("pending")
+def test_k_happy_path(long_linked_list):
+  actual = long_linked_list.kth_from_end(4)
+  expected = 3
+  assert actual == expected
+
 
 #######################
 # Fixtures
@@ -120,6 +151,18 @@ def short_linked_list():
     
     return linked_list
 
+@pytest.fixture
+def one_node_linked_list():
+    node = Node(0)
+    linked_list = LinkedList(node)
+    
+    return linked_list
+
+@pytest.fixture
+def empty_linked_list():
+    linked_list = LinkedList()
+    
+    return linked_list
 
 @pytest.fixture(autouse=True)
 def clean():
