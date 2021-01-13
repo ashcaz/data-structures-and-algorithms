@@ -1,5 +1,5 @@
 import pytest
-from stacks_and_queues.stacks_and_queues import Queue #, InvalidOperationError
+from code_challenges.stacks_and_queues.stacks_and_queues import Queue, InvalidOperationError
 
 
 def test_enqueue():
