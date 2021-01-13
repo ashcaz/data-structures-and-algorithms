@@ -193,3 +193,19 @@ Space complexity: 0(1), we are not creating any new data structures
 ### Solution
 ![Whiteboard image](./assets/CC7.png)
 
+
+## CC-8: Link List - Zip
+Zip two Linked Lists
+
+### Challenge
+Write a function called `zipLists` which takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list. Try and keep additional space down to O(1). You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+### Approach & Efficiency
+Iterated through both linked lists and used the inster_after method to add link list to nodes into link list 1
+
+Time complexity: O(n), linear. The larger the linked lists the more time it will take to traverse it
+Space complexity: 0(1), we are not creating any new data structures
+
+### Solution
+![Whiteboard image](./assets/ll_zipped.png)
+
