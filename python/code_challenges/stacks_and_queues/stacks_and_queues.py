@@ -119,6 +119,14 @@ class Queue():
     # return value of temp node
     return node.value
 
+  def peek(self):
+    #check if stack is empty
+    if self.is_empty():
+        raise InvalidOperationError("Method not allowed on empty collection")
+
+    return self.front.value
+
+
   def is_empty(self):
     if not self.front:
       return True
