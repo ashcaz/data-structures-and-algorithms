@@ -317,8 +317,8 @@ Create a brand new `PseudoQueue` class. Do not use an existing Queue. Instead, t
 
 PseudoQueue:
 
--   enqueue: O(1) Time / O(n) Space
--   dequeue: O(1) Time / O(1) Space
+-   enqueue: O(n) Time / O(1) Space
+-   dequeue: O(n) Time / O(1) Space
 
 ### Solution
 
