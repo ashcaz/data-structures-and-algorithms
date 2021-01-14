@@ -301,7 +301,7 @@ Queues:
 ![Whiteboard image](./assets/stack1.png)
 ![Whiteboard image](./assets/Queue.png)
 
-## CC-11: Ques with Stacks
+## CC-11: Queues with Stacks
 
 Implement a Queue using two Stacks.
 
@@ -323,3 +323,25 @@ PseudoQueue:
 ### Solution
 
 ![Whiteboard image](./assets/CC11-QueueWithStacks.png)
+
+## CC-12: Queues with Stacks
+
+First-in, First out Animal Shelter.
+
+### Challenge
+
+-   Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
+-   Implement the following methods:
+    -   `enqueue(animal)`: adds `animal` to the shelter. `animal` can be either a dog or a cat object.
+    -   `dequeue(pref)`: returns either a dog or a cat. If `pref` is not `"dog"` or `"cat"` then return null.
+
+### Time Complexities
+
+PseudoQueue:
+
+-   enqueue: O(1) Time / O(1) Space
+-   dequeue: O(1) Time / O(1) Space
+
+### Solution
+
+![Whiteboard image](./assets/CC12-Animal_shelter.png)
