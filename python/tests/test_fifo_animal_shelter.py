@@ -1,12 +1,21 @@
 import pytest
 from code_challenges.fifo_animal_shelter.fifo_animal_shelter import AnimalShelter
+from code_challenges.stacks_and_queues.stacks_and_queues import InvalidOperationError
 
 
-def test_enqueue():
+def test_enqueue_dog():
     a = AnimalShelter()
     a.enqueue("dog")
     actual = a.dogs.front.value
     expected = "dog"
+    assert actual == expected
+
+
+def test_enqueue_cat():
+    a = AnimalShelter()
+    a.enqueue("cat")
+    actual = a.cats.front.value
+    expected = "cat"
     assert actual == expected
 
 
@@ -21,37 +30,14 @@ def test_dequeue():
 def test_dequeue_when_empty():
     a = AnimalShelter()
     with pytest.raises(InvalidOperationError) as e:
-        a.dequeue()
+        a.dequeue("dog")
 
     assert str(e.value) == "Method not allowed on empty collection"
 
 
-@pytest.mark.skip("pending")
-def test_dequeue_when_full():
-    q = PseudoQueue()
-    q.enqueue("apples")
-    q.enqueue("bananas")
-    actual = q.dequeue()
-    expected = "apples"
-    assert actual == expected
-
-
-@pytest.mark.skip("pending")
-def test_enqueue_two():
+def test_not_cat_or_dog():
     a = AnimalShelter()
-    a.enqueue("dog")
-    q.enqueue("dog")
-    # actual =
-    # expected =
-    assert actual == expected
+    with pytest.raises(InvalidOperationError) as e:
+        a.enqueue("pig")
 
-
-@pytest.mark.skip("pending")
-def test_peek_post_dequeue():
-    q = PseudoQueue()
-    q.enqueue("apples")
-    q.enqueue("bananas")
-    q.dequeue()
-    actual = q.first_on_top.top.value
-    expected = "bananas"
-    assert actual == expected
+    assert str(e.value) == "We only have cats and dogs at this shelter!"
