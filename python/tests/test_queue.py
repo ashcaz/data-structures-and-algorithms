@@ -21,6 +21,15 @@ def test_dequeue():
     assert actual == expected
 
 
+def test_dequeue_with_one_node():
+    q = Queue()
+    q.enqueue("apple")
+    q.dequeue()
+    actual = q.rear
+    expected = None
+    assert actual == expected
+
+
 def test_peek():
     q = Queue()
     q.enqueue("apple")
