@@ -369,4 +369,4 @@ Iterated through the str using a dictionary to keep track of of the barckets and
 
 ### Solution
 
-![Whiteboard image](./assets/CC12-Animal_shelter.png)
+![Whiteboard image](./assets/CC13-Multi-bracket-validation.png)
