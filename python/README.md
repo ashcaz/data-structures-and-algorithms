@@ -324,7 +324,7 @@ PseudoQueue:
 
 ![Whiteboard image](./assets/CC11-QueueWithStacks.png)
 
-## CC-12: Queues with Stacks
+## CC-12: Queues with Animal Shelter
 
 First-in, First out Animal Shelter.
 
@@ -345,3 +345,28 @@ PseudoQueue:
 ### Solution
 
 ![Whiteboard image](./assets/CC12-Animal_shelter.png)
+
+## CC-13: Multi-bracket Validation
+
+Multi-bracket Validation.
+
+### Challenge
+
+Your function should take a string as its only argument, and should return a boolean representing whether or not the brackets in the string are balanced. There are 3 types of brackets:
+
+-   Round Brackets : ()
+-   Square Brackets : []
+-   Curly Brackets : {}
+
+### Approach & Efficiency
+
+Iterated through the str using a dictionary to keep track of of the barckets and how many times they show up.
+
+### Time Complexities
+
+-   Time: O(n) , linear. The larger str the more time it will take to iterate through it
+-   Space: O(n), created a dictionary to keep track of the brackets
+
+### Solution
+
+![Whiteboard image](./assets/CC13-Multi-bracket-validation.png)
