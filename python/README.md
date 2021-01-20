@@ -324,7 +324,7 @@ PseudoQueue:
 
 ![Whiteboard image](./assets/CC11-QueueWithStacks.png)
 
-## CC-12: Queues with Stacks
+## CC-12: Queues with Animal Shelter
 
 First-in, First out Animal Shelter.
 
@@ -346,7 +346,7 @@ PseudoQueue:
 
 ![Whiteboard image](./assets/CC12-Animal_shelter.png)
 
-## CC-13: Queues with Stacks
+## CC-13: Multi-bracket Validation
 
 Multi-bracket Validation.
 
