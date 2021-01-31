@@ -88,10 +88,39 @@ class BinaryTree:
 
 
 class BinarySearchTree(BinaryTree):
-    def add(self, value):
+    def add(self, value: int):
         # find the correct spot to add this value and add it there
         pass
 
-    def contains(self, value):
-        # return true if the value is in the tree or false otherwise
-        pass
+    def contains(self, value: int) -> bool:
+        """[return true if the value is in the tree]
+
+        Args:
+            value (int): [vaule you want to search for]
+
+        Returns:
+            bool: [Returns true is value is found in the tree]
+        """
+
+        def traverse(root, value):
+            """[helper function used to recursively traverse the binary tree]
+
+            Args:
+                root ([type]): [root you want to traverse]
+            """
+
+            if root is not None:  # base case
+
+                # if values is equal to root return true
+                if root.value == value:
+                    return True
+                # if value is less than root traverse left
+                if value < root.value:
+                    return traverse(root.left, value)
+                # if value is greater than root then traverse right
+                if value > root.value:
+                    return traverse(root.right, value)
+            # if there is no node here then exit
+            return False
+
+        return traverse(self.root, value)

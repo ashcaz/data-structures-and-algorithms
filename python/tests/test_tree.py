@@ -55,6 +55,35 @@ def test_bt_post_order(binary_tree_example, capsys):
     assert captured.out == "D\nE\nB\nF\nC\nA\n"
 
 
+# @pytest.mark.skip("pending")
+def test_bst_contains_empty():
+    tree = BinarySearchTree()
+    actual = tree.contains(5)
+    expected = False
+    assert actual == expected
+
+
+# @pytest.mark.skip("pending")
+def test_bst_contains_less(bst_example):
+    actual = bst_example.contains(12)
+    expected = True
+    assert actual == expected
+
+
+# @pytest.mark.skip("pending")
+def test_bst_contains_greater(bst_example):
+    actual = bst_example.contains(95)
+    expected = True
+    assert actual == expected
+
+
+# @pytest.mark.skip("pending")
+def test_bst_contains_false(bst_example):
+    actual = bst_example.contains(7)
+    expected = False
+    assert actual == expected
+
+
 #######################
 # Fixtures
 #######################
@@ -76,5 +105,27 @@ def binary_tree_example():
     tree = BinaryTree(a)
     tree.root.left = b
     tree.root.right = c
+
+    return tree
+
+
+@pytest.fixture
+def bst_example():
+    a = Node(25)
+    b = Node(3)
+    c = Node(16)
+    d = Node(12)
+    e = Node(32)
+    f = Node(44)
+    g = Node(95)
+
+    d.left = b
+    d.right = c
+    f.left = e
+    f.right = g
+
+    tree = BinarySearchTree(a)
+    tree.root.left = d
+    tree.root.right = f
 
     return tree
