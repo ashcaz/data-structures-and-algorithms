@@ -55,6 +55,7 @@ def multi_bracket_validation(str_input: str) -> bool:
             if modified_stack[last_index] == "(" and character == ")":
                 modified_stack.pop()
             elif modified_stack[last_index] == "{" and character == "}":
+                modified_stack.pop()
             else:
                 return False
         elif character == "}":
