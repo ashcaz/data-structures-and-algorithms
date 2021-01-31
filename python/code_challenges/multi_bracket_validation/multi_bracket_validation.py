@@ -46,7 +46,7 @@ def multi_bracket_validation(str_input: str) -> bool:
     closed_brackets = ["}", ")", "]"]
 
     for character in str_input:
-
+        print(character)
         if character in open_brackets:
             modified_stack.append(character)
         elif character in closed_brackets:
@@ -56,19 +56,7 @@ def multi_bracket_validation(str_input: str) -> bool:
                 modified_stack.pop()
             elif modified_stack[last_index] == "{" and character == "}":
                 modified_stack.pop()
-            else:
-                return False
-        elif character == "}":
-            if not len(modified_stack):
-                return False
-            if modified_stack[len(modified_stack) - 1] == "{":
-                modified_stack.pop()
-            else:
-                return False
-        elif character == "]":
-            if not len(modified_stack):
-                return False
-            if modified_stack[len(modified_stack) - 1] == "[":
+            elif modified_stack[last_index] == "[" and character == "]":
                 modified_stack.pop()
             else:
                 return False
