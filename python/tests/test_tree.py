@@ -159,3 +159,29 @@ def bst_example():
     tree.root.right = f
 
     return tree
+
+
+@pytest.fixture
+def bt_max():
+    a = Node(2)
+    b = Node(7)
+    c = Node(5)
+    d = Node(2)
+    e = Node(6)
+    f = Node(5)
+    g = Node(11)
+    h = Node(9)
+    i = Node(4)
+
+    b.left = d
+    b.right = e
+    e.left = f
+    e.right = g
+    c.left = h
+    h.left = i
+
+    tree = BinarySearchTree(a)
+    tree.root.left = b
+    tree.root.right = c
+
+    return tree
