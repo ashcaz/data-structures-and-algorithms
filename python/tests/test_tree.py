@@ -84,6 +84,36 @@ def test_bst_contains_false(bst_example):
     assert actual == expected
 
 
+# @pytest.mark.skip("pending")
+def test_bst_add_to_empty():
+    tree = BinarySearchTree()
+    tree.add(5)
+    actual = tree.root.value
+    expected = 5
+    assert actual == expected
+
+
+# @pytest.mark.skip("pending")
+def test_bst_already_exists(bst_example):
+    actual = bst_example.add(25)
+    expected = "Value already exsits in BST"
+    assert actual == expected
+
+
+# @pytest.mark.skip("pending")
+def test_bst_add_to_left(bst_example, capsys):
+    bst_example.add(15)
+    captured = capsys.readouterr()
+    assert captured.out == "25\n12\n16\n15\n"
+
+
+# @pytest.mark.skip("pending")
+def test_bst_add_to_right(bst_example, capsys):
+    bst_example.add(72)
+    captured = capsys.readouterr()
+    assert captured.out == "25\n44\n95\n72\n"
+
+
 #######################
 # Fixtures
 #######################
