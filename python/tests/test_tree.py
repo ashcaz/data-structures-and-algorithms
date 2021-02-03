@@ -114,6 +114,35 @@ def test_bst_add_to_right(bst_example, capsys):
     assert captured.out == "25\n44\n95\n72\n"
 
 
+# @pytest.mark.skip("pending")
+def test_bt_max_value_empty():
+    tree = BinaryTree()
+    actual = tree.find_maximun_value()
+    expected = 0
+    assert actual == expected
+
+
+# @pytest.mark.skip("pending")
+def test_bt_max_value_one(bt_max):
+    actual = bt_max.find_maximun_value()
+    expected = 11
+    assert actual == expected
+
+
+# @pytest.mark.skip("pending")
+def test_bt_max_value_two(bt_max2):
+    actual = bt_max2.find_maximun_value()
+    expected = 44
+    assert actual == expected
+
+
+# @pytest.mark.skip("pending")
+def test_bt_max_value_three(bt_max3):
+    actual = bt_max3.find_maximun_value()
+    expected = 102
+    assert actual == expected
+
+
 #######################
 # Fixtures
 #######################
@@ -172,6 +201,58 @@ def bt_max():
     g = Node(11)
     h = Node(9)
     i = Node(4)
+
+    b.left = d
+    b.right = e
+    e.left = f
+    e.right = g
+    c.left = h
+    h.left = i
+
+    tree = BinarySearchTree(a)
+    tree.root.left = b
+    tree.root.right = c
+
+    return tree
+
+
+@pytest.fixture
+def bt_max2():
+    a = Node(2)
+    b = Node(7)
+    c = Node(5)
+    d = Node(2)
+    e = Node(36)
+    f = Node(5)
+    g = Node(11)
+    h = Node(9)
+    i = Node(44)
+
+    b.left = d
+    b.right = e
+    e.left = f
+    e.right = g
+    c.left = h
+    h.left = i
+
+    tree = BinarySearchTree(a)
+    tree.root.left = b
+    tree.root.right = c
+
+    return tree
+
+
+@pytest.fixture
+def bt_max3():
+    a = Node(2)
+    b = Node(7)
+    c = Node(5)
+    d = Node(2)
+    e = Node(36)
+    f = Node(102)
+    g = Node(85)
+    h = Node(9)
+    i = Node(44)
 
     b.left = d
     b.right = e

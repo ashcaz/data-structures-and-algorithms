@@ -86,21 +86,58 @@ class BinaryTree:
 
         traverse(self.root)
 
+    def find_maximun_value(self):
+        max_value = 0
+
+        def traverse(root):
+            """[helper function used to recursively traverse the binary tree]
+
+            Args:
+                root ([type]): [root you want to traverse]
+            """
+            nonlocal max_value
+
+            # if there is no node here then exit
+            if not root:  # base case
+                return max_value
+            # check if root value is > max_value
+            print(f"root: {root.value}")
+            print(f"max: {max_value}")
+
+            if root.value > max_value:
+                max_value = root.value
+            # traverse left
+            traverse(root.left)
+            # traverse right
+            traverse(root.right)
+
+        traverse(self.root)
+        return max_value
+
 
 class BinarySearchTree(BinaryTree):
     """Binary Search Tree Class"""
 
     def add(self, add_value: int):
+        """[adds node to BST]
+
+        Args:
+            add_value (int): [Value you want to add]
+
+        Returns:
+            [type]: [Return string if value already exists]
+        """
 
         if not self.root:
             self.root = Node(add_value)
             return
 
         def traverse(root, value):
-            """[helper function used to recursively traverse the binary tree]
+            """[helper function used to recursively traverse the binary search tree]
 
             Args:
                 root ([type]): [root you want to traverse]
+                value ([type]): [Value you want to add]
             """
             # if value already exists
             if root.value == value:
