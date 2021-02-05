@@ -20,7 +20,8 @@ def test_true_round():
 
 
 def test_true_all():
-    input_str = "()[]{}"
+    input_str = f"()[]{{}}"
+    print(input_str)
     actual = multi_bracket_validation(input_str)
     expected = True
     assert actual == expected

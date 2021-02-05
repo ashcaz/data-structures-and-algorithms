@@ -41,29 +41,22 @@ def multi_bracket_validation(str_input: str) -> bool:
         raise Exception("Method can not be ran with an empty string")
 
     modified_stack = []
+    last_index = len(modified_stack) - 1
+    open_brackets = ["{", "(", "["]
+    closed_brackets = ["}", ")", "]"]
 
     for character in str_input:
-
-        if character == "{" or character == "(" or character == "[":
+        print(character)
+        if character in open_brackets:
             modified_stack.append(character)
-        elif character == ")":
+        elif character in closed_brackets:
             if not len(modified_stack):
                 return False
-            if modified_stack[len(modified_stack) - 1] == "(":
+            if modified_stack[last_index] == "(" and character == ")":
                 modified_stack.pop()
-            else:
-                return False
-        elif character == "}":
-            if not len(modified_stack):
-                return False
-            if modified_stack[len(modified_stack) - 1] == "{":
+            elif modified_stack[last_index] == "{" and character == "}":
                 modified_stack.pop()
-            else:
-                return False
-        elif character == "]":
-            if not len(modified_stack):
-                return False
-            if modified_stack[len(modified_stack) - 1] == "[":
+            elif modified_stack[last_index] == "[" and character == "]":
                 modified_stack.pop()
             else:
                 return False
