@@ -1,6 +1,6 @@
 class Node:
     """We need to point to two other nodes ina a Binary Tree so the Node must have two pointers
-    Traditionally they are called 'left' and 'right'
+    Since this is a K-ary Tree a node can have more then one child. So the children are placed into an list named self.children
     """
 
     def __init__(self, value=None):
@@ -12,7 +12,7 @@ class KTree:
     """K-ary Tree Class"""
 
     def __init__(self, root=None):
-        """[construtor funtion for instantiation of a binary tree]
+        """[construtor funtion for instantiation of a k-ary Tree]
 
         Args:
             root ([type], optional): [root node]. Defaults to None.
@@ -21,6 +21,14 @@ class KTree:
 
 
 def fizzbuzz_tree(ktree):
+    """[Takes in a k-ary Tree and applies FizzBuzz to the values of the tree]
+
+    Args:
+        ktree ([type]): [K-ary Tree]
+
+    Returns:
+        [type]: [K-ary Tree]
+    """
 
     new_ktree = ktree
     tree_list = []
