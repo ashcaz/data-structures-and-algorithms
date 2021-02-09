@@ -1,5 +1,5 @@
 import json
-from code_challenges.stacks_and_queues.stacks_and_queues import Queue
+from stacks_and_queues.stacks_and_queues import Queue
 
 # Node based data structure
 
