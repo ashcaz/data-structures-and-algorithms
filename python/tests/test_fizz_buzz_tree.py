@@ -16,6 +16,13 @@ def test_fb_one(ktree_example):
     assert actual == expected
 
 
+# @pytest.mark.skip("pending")
+def test_fb_fail(ktree_example):
+    actual = fizzbuzz_tree(ktree_example)
+    expected = ["1", "2", "Buzz", "Fizz", "Fizz", "7", "Buzz", "4", "41"]
+    assert actual != expected
+
+
 #######################
 # Fixtures
 #######################
