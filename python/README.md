@@ -410,3 +410,22 @@ BST:
 ### Example of BST
 
 ![Whiteboard image](./assets/BST2.png)
+
+## CC-16: Maximum Value in a Binary Tree
+
+Find the Maximum Value in a Binary Tree
+
+### Challenge
+
+Write an instance method called find-maximum-value. Without utilizing any of the built-in methods available to your language, return the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
+
+### Approach & Efficiency
+
+Traverse the whole tree while comparing values to variable holding the current max. After the whole tree has been traversed and values assessed, the function will return the current max variable.
+
+Time complexity: O(log n)
+Space complexity: 0(1)
+
+### Solution
+
+![Whiteboard image](./assets/ll_zipped.png)
