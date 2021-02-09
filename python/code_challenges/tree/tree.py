@@ -1,4 +1,5 @@
 import json
+from code_challenges.stacks_and_queues.stacks_and_queues import Queue
 
 # Node based data structure
 
@@ -113,6 +114,30 @@ class BinaryTree:
 
         traverse(self.root)
         return max_value
+
+    def breadth_first(self):
+
+        breadth_first_list = []
+
+        if not self.root:
+            return breadth_first_list
+
+        breadth_queue = Queue()
+        breadth_queue.enqueue(self.root)
+
+        while breadth_queue.front is not None:
+
+            current = breadth_queue.dequeue()
+
+            if current.left is not None:
+                breadth_queue.enqueue(current.left)
+
+            if current.right is not None:
+                breadth_queue.enqueue(current.right)
+
+            breadth_first_list.append(current.value)
+
+        return breadth_first_list
 
 
 class BinarySearchTree(BinaryTree):

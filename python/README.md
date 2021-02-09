@@ -417,7 +417,7 @@ Find the Maximum Value in a Binary Tree
 
 ### Challenge
 
-Write an instance method called find-maximum-value. Without utilizing any of the built-in methods available to your language, return the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
+Write an instance method called `find-maximum-value`. Without utilizing any of the built-in methods available to your language, return the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
 
 ### Approach & Efficiency
 
@@ -428,4 +428,23 @@ Space complexity: 0(1)
 
 ### Solution
 
-![Whiteboard image](./assets/ll_zipped.png)
+![Whiteboard image](./assets/CC-16.png)
+
+## CC-17: Maximum Value in a Binary Tree
+
+Find the Maximum Value in a Binary Tree
+
+### Challenge
+
+Write a breadth first traversal method which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach, and return a list of the values in the tree in the order they were encountered.
+
+### Approach & Efficiency
+
+Traverse the width of the tree using a Queue
+
+Time complexity: O(log n)
+Space complexity: 0(n)
+
+### Solution
+
+![Whiteboard image](./assets/CC-17.png)

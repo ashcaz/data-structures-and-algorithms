@@ -143,6 +143,26 @@ def test_bt_max_value_three(bt_max3):
     assert actual == expected
 
 
+# @pytest.mark.skip("pending")
+def test_bt_breadth_empty():
+    tree = BinarySearchTree()
+    actual = tree.breadth_first()
+    expected = []
+    assert actual == expected
+
+
+def test_bt_breadth_one(binary_tree_example):
+    actual = binary_tree_example.breadth_first()
+    expected = ["A", "B", "C", "D", "E", "F"]
+    assert actual == expected
+
+
+def test_bt_breadth_two(bst_example):
+    actual = bst_example.breadth_first()
+    expected = [25, 12, 44, 3, 16, 32, 95]
+    assert actual == expected
+
+
 #######################
 # Fixtures
 #######################
