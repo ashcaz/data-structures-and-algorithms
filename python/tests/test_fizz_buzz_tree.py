@@ -12,7 +12,7 @@ def test_fb_empty():
 # @pytest.mark.skip("pending")
 def test_fb_one(ktree_example):
     actual = fizzbuzz_tree(ktree_example)
-    expected = "ktree is empty"
+    expected = ["1", "2", "Buzz", "Fizz", "Fizz", "7", "Buzz", "4", "FizzBuzz", "41"]
     assert actual == expected
 
 
@@ -30,7 +30,7 @@ def ktree_example():
     e = Node(5)
     f = Node(6)
     g = Node(7)
-    h = Node(21)
+    h = Node(10)
     i = Node(30)
     j = Node(41)
 

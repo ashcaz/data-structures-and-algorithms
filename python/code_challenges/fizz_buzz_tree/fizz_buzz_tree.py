@@ -30,24 +30,27 @@ def fizzbuzz_tree(ktree):
         nonlocal tree_list
 
         if not root:
-            return tree_list
+            return
 
-        elif not len(root.children):
-            if not root.value % 15:
-                root.value = "FizzBuzz"
-                tree_list.append(root.value)
-            elif not root.value % 5:
-                root.value = "Buzz"
-                tree_list.append(root.value)
-            elif not root.value % 3:
-                root.value = "Fizz"
-                tree_list.append(root.value)
-            else:
-                root.value = str(root.value)
-                tree_list.append(root.value)
+        print(root.value)
 
+        if not root.value % 15:
+            root.value = "FizzBuzz"
+        elif not root.value % 5:
+            root.value = "Buzz"
+        elif not root.value % 3:
+            root.value = "Fizz"
         else:
-            for child in root.children:
-                traverse(child)
+            root.value = str(root.value)
 
-    return traverse(new_ktree.root)
+        tree_list.append(root.value)
+        print(tree_list)
+
+        for i in range(len(root.children)):
+            traverse(root.children[i])
+
+        return
+
+    traverse(new_ktree.root)
+
+    return tree_list
