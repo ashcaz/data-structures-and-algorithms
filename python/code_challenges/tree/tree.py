@@ -1,5 +1,4 @@
 import json
-from stacks_and_queues.stacks_and_queues import Queue
 
 # Node based data structure
 
@@ -102,8 +101,6 @@ class BinaryTree:
             if not root:  # base case
                 return max_value
             # check if root value is > max_value
-            print(f"root: {root.value}")
-            print(f"max: {max_value}")
 
             if root.value > max_value:
                 max_value = root.value
@@ -217,3 +214,27 @@ class BinarySearchTree(BinaryTree):
             return False
 
         return traverse(self.root, value)
+
+
+a = Node(2)
+b = Node(7)
+c = Node(5)
+d = Node(2)
+e = Node(36)
+f = Node(102)
+g = Node(85)
+h = Node(9)
+i = Node(44)
+
+b.left = d
+b.right = e
+e.left = f
+e.right = g
+c.left = h
+h.left = i
+
+tree = BinarySearchTree(a)
+tree.root.left = b
+tree.root.right = c
+
+print(tree.find_maximun_value())
