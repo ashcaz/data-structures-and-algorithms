@@ -67,7 +67,7 @@ def test_sort_output4():
     assert actual == expected
 
 
-@pytest.mark.skip("pending")
+# @pytest.mark.skip("pending")
 def test_not_sort_output4():
     sort_list = [2, 3, 5, 7, 13, 11]
     actual = sort_func(sort_list)
