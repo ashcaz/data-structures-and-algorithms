@@ -1,4 +1,5 @@
 import json
+from stacks_and_queues.stacks_and_queues import Queue
 
 # Node based data structure
 
@@ -18,7 +19,7 @@ class BinaryTree:
     """Binary Tree Class"""
 
     def __init__(self, root=None):
-        """[construtor funtion for instantiation of a binary tree]
+        """[constructor function for instantiation of a binary tree]
 
         Args:
             root ([type], optional): [root node]. Defaults to None.
@@ -163,7 +164,7 @@ class BinarySearchTree(BinaryTree):
             """
             # if value already exists
             if root.value == value:
-                return "Value already exsits in BST"
+                return "Value already exists in BST"
             print(root.value)
 
             if value > root.value:
@@ -186,7 +187,7 @@ class BinarySearchTree(BinaryTree):
         """[return true if the value is in the tree]
 
         Args:
-            value (int): [vaule you want to search for]
+            value (int): [value you want to search for]
 
         Returns:
             bool: [Returns true is value is found in the tree]
