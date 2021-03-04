@@ -89,6 +89,7 @@ i = 1
 j = 0
 temp = 4
 sort_list = [8, 4, 23, 42, 16, 15]
+                ^
 ```
 
 So evaluating the values for the while loop j is greater than or equal to 0 and the temp value (4) is less than sort_list at j (8). So we enter the while loop.
@@ -109,4 +110,100 @@ i = 1
 j = -1
 temp = 4
 sort_list = [4, 8, 23, 42, 16, 15]
+```
+
+### Second run through the for loop
+
+before the while loop
+
+```Python
+i = 2
+j = 1
+temp = 23
+sort_list = [4, 8, 23, 42, 16, 15]
+
+```
+
+So evaluating the values for the while loop j is greater than or equal to 0 but the temp value (23) **IS NOT** less than sort_list at j (8) so we do not enter the while loop.
+
+```Python
+i = 2
+j = 1
+temp = 23
+sort_list = [4, 8, 23, 42, 16, 15]
+                ^
+```
+
+J does decrement because we did not enter the while loop so 23 stays at its original index.
+
+### Third run through the for loop
+
+before the while loop
+
+```Python
+i = 3
+j = 2
+temp = 42
+sort_list = [4, 8, 23, 42, 16, 15]
+```
+
+Once again evaluating the values for the while loop j is greater than or equal to 0 but the temp value (42) **IS NOT** less than sort_list (23) at j so we do not enter the while loop.
+
+```Python
+i = 2
+j = 1
+temp = 23
+sort_list = [4, 8, 23, 42, 16, 15]
+                        ^
+```
+
+J does decrement because we did not enter the while loop so 42 stays at its original index.
+
+### Fourth run through the for loop
+
+before the while loop
+
+```Python
+i = 4
+j = 3
+temp = 16
+sort_list = [4, 8, 23, 42, 16, 15]
+```
+
+So evaluating the values for the while loop j is greater than or equal to 0 and the temp value (16) is less than sort_list at j (42). So we enter the while loop.
+
+We then move 42 to index 4 because it is greater than 16. We also decrement j.
+
+```Python
+i = 4
+j = 2
+temp = 16
+sort_list = [4, 8, 23, 42, 42, 15]
+```
+
+Since j is still greater than or equal to 0 AND 16 is less than 23 we go through the while loop again.
+
+```Python
+i = 4
+j = 2
+temp = 16
+sort_list = [4, 8, 23, 42, 42, 15]
+```
+
+We then move 23 to index 3 because it is greater than 16. We decrement j again.
+
+```Python
+i = 4
+j = 1
+temp = 16
+sort_list = [4, 8, 23, 23, 42, 15]
+```
+
+After we exit the while loop we then assign the temp value to index 2
+
+```Python
+i = 4
+j = 1
+temp = 16
+sort_list = [4, 8, 16, 23, 42, 15]
 ```
