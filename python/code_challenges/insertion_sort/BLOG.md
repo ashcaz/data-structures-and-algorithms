@@ -56,3 +56,7 @@ This will continue until we have gone the whole way through the array
 ## Walk through
 
 Now that we have walked through what each line does lets take an unsorted list and look at what every loop looks like to sort it.
+
+```Python
+list_to_sort = [8,4,23,42,16,15]
+```

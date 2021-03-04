@@ -1,13 +1,22 @@
 def sort_func(sort_list: list) -> list:
+    """[Sorts a list in place]
 
-    # FOR i = 1 to arr.length
+    Args:
+        sort_list (list): [list to be sorted]
 
-    #   var int j <-- i - 1
-    #   int temp <-- arr[i]
+    Returns:
+        list: [sorted list]
+    """
 
-    #   WHILE j >= 0 AND temp < arr[j]
-    #     arr[j + 1] <-- arr[j]
-    #     j <-- j - 1
+    for i in range(1, len(sort_list)):
+        j = i - 1
+        temp = sort_list[i]
 
-    #   arr[j + 1] <-- temp
+        while j >= 0 and temp < sort_list[j]:
+
+            sort_list[j + 1] = sort_list[j]
+            j = j - 1
+
+        sort_list[j + 1] = temp
+
     return sort_list

@@ -27,7 +27,7 @@ def test_not_sort_output1():
 def test_sort_output2():
     sort_list = [20, 18, 12, 8, 5, -2]
     actual = sort_func(sort_list)
-    expected = [-2, 5, 8, 12, 20]
+    expected = [-2, 5, 8, 12, 18, 20]
     assert actual == expected
 
 
