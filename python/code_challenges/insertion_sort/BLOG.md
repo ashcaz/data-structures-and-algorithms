@@ -207,3 +207,58 @@ j = 1
 temp = 16
 sort_list = [4, 8, 16, 23, 42, 15]
 ```
+
+### Last run through the for loop
+
+before the while loop
+
+```Python
+i = 5
+j = 4
+temp = 15
+sort_list = [4, 8, 16, 23, 42, 15]
+```
+
+So evaluating the values for the while loop j is greater than or equal to 0 and the temp value (15) is less than sort_list at j (42). So we enter the while loop.
+
+We then move 42 to index 5 because it is greater than 15. We also decrement j.
+
+```Python
+i = 5
+j = 3
+temp = 15
+sort_list = [4, 8, 16, 23, 42, 42]
+```
+
+Since j is still greater than or equal to 0 AND 15 is less than 23 we go through the while loop again.
+
+We then move 23 to index 4 because it is greater than 15. We decrement j again.
+
+```Python
+i = 5
+j = 2
+temp = 15
+sort_list = [4, 8, 16, 23, 23, 42]
+```
+
+Since j is STILL greater than or equal to 0 AND 15 is less than 16 we go through the while loop again.
+
+We then move 16 to index 3 because it is greater than 15. We decrement j again.
+
+```Python
+i = 5
+j = 1
+temp = 15
+sort_list = [4, 8, 16, 16, 23, 42]
+```
+
+We then exit the while loop because 15 IS NOT less than 8. So we then assign the temp value to index 2
+
+```Python
+i = 5
+j = 1
+temp = 15
+sort_list = [4, 8, 15, 16, 23, 42]
+```
+
+NOW WE HAVE A SORTED LIST!
