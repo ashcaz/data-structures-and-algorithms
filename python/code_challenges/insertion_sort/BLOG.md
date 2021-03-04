@@ -60,3 +60,53 @@ Now that we have walked through what each line does lets take an unsorted list a
 ```Python
 list_to_sort = [8,4,23,42,16,15]
 ```
+
+CODE:
+
+```Python
+def sort_func(sort_list: list) -> list:
+
+    for i in range(1, len(sort_list)):
+        j = i - 1
+        temp = sort_list[i]
+
+        while j >= 0 and temp < sort_list[j]:
+
+            sort_list[j + 1] = sort_list[j]
+            j = j - 1
+
+        sort_list[j + 1] = temp
+
+    return sort_list
+```
+
+### First run through the for loop
+
+before the while loop
+
+```Python
+i = 1
+j = 0
+temp = 4
+sort_list = [8, 4, 23, 42, 16, 15]
+```
+
+So evaluating the values for the while loop j is greater than or equal to 0 and the temp value (4) is less than sort_list at j (8). So we enter the while loop.
+
+We then move 8 to index 1 because it is greater than 4. We also decrement j so that we exit the while loop.
+
+```Python
+i = 1
+j = -1
+temp = 4
+sort_list = [8, 8, 23, 42, 16, 15]
+```
+
+After we exit the while loop we then assign the temp value to index 1
+
+```Python
+i = 1
+j = -1
+temp = 4
+sort_list = [4, 8, 23, 42, 16, 15]
+```
