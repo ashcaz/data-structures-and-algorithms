@@ -3,7 +3,7 @@ import pytest
 from code_challenges.merge_sort.merge_sort import sort_merge
 
 
-# @pytest.mark.skip("pending")
+@pytest.mark.skip("pending")
 def test_sort_empty_list():
     empty_list = []
     actual = sort_merge(empty_list)
@@ -11,7 +11,7 @@ def test_sort_empty_list():
     assert actual == expected
 
 
-# @pytest.mark.skip("pending")
+@pytest.mark.skip("pending")
 def test_sort_one_index():
     sort_list = [1]
     actual = sort_merge(sort_list)
@@ -27,7 +27,7 @@ def test_sort_output1():
     assert actual == expected
 
 
-# @pytest.mark.skip("pending")
+@pytest.mark.skip("pending")
 def test_not_sort_output1():
     sort_list = [8, 4, 23, 42, 16, 15]
     actual = sort_merge(sort_list)
@@ -35,7 +35,7 @@ def test_not_sort_output1():
     assert actual != expected
 
 
-# @pytest.mark.skip("pending")
+@pytest.mark.skip("pending")
 def test_sort_output2():
     sort_list = [20, 18, 12, 8, 5, -2]
     actual = sort_merge(sort_list)
@@ -43,7 +43,7 @@ def test_sort_output2():
     assert actual == expected
 
 
-# @pytest.mark.skip("pending")
+@pytest.mark.skip("pending")
 def test_not_sort_output2():
     sort_list = [20, 18, 12, 8, 5, -2]
     actual = sort_merge(sort_list)
@@ -51,7 +51,7 @@ def test_not_sort_output2():
     assert actual != expected
 
 
-# @pytest.mark.skip("pending")
+@pytest.mark.skip("pending")
 def test_sort_output3():
     sort_list = [5, 12, 7, 5, 5, 7]
     actual = sort_merge(sort_list)
@@ -59,7 +59,7 @@ def test_sort_output3():
     assert actual == expected
 
 
-# @pytest.mark.skip("pending")
+@pytest.mark.skip("pending")
 def test_not_sort_output3():
     sort_list = [5, 12, 7, 5, 5, 7]
     actual = sort_merge(sort_list)
@@ -67,7 +67,7 @@ def test_not_sort_output3():
     assert actual != expected
 
 
-# @pytest.mark.skip("pending")
+@pytest.mark.skip("pending")
 def test_sort_output4():
     sort_list = [2, 3, 5, 7, 13, 11]
     actual = sort_merge(sort_list)
@@ -75,7 +75,7 @@ def test_sort_output4():
     assert actual == expected
 
 
-# @pytest.mark.skip("pending")
+@pytest.mark.skip("pending")
 def test_not_sort_output4():
     sort_list = [2, 3, 5, 7, 13, 11]
     actual = sort_merge(sort_list)
