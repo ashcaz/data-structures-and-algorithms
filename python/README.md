@@ -484,7 +484,7 @@ Review the pseudocode below, then trace the algorithm by stepping through the pr
 Time complexity: O(n^2)
 Space complexity: 0(1)
 
-## CC-26: Merge Sort
+## CC-27: Merge Sort
 
 Link to [Blog](./code_challenges/merge_sort/BLOG.md) post
 
@@ -494,3 +494,14 @@ Review the pseudocode below, then trace the algorithm by stepping through the pr
 
 Time complexity: O(n log(n))
 Space complexity: 0(n)
+
+## CC-28: Quick Sort
+
+Link to [Blog](./code_challenges/quick_sort/BLOG.md) post
+
+Review the pseudocode below, then trace the algorithm by stepping through the process with the provided sample array. Document your explanation by creating a blog article that shows the step-by-step output after each iteration through some sort of visual.
+
+### Approach & Efficiency
+
+Time complexity: O(n^2)
+Space complexity: 0(log n)
