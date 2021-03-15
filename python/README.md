@@ -505,3 +505,21 @@ Review the pseudocode below, then trace the algorithm by stepping through the pr
 
 Time complexity: O(n^2)
 Space complexity: 0(log n)
+
+## CC-30: Hashtable Implementation
+
+Implement a Hashtable
+
+### Challenge
+
+Implement a Hashtable with the following methods:
+
+1. `add`: takes in both the key and value. This method should hash the key, and add the key and value pair to the table, handling collisions as needed.
+2. `get`: takes in the key and returns the value from the table.
+3. `contains`: takes in the key and returns a boolean, indicating if the key exists in the table already.
+4. `hash`: takes in an arbitrary key and returns an index in the collection.
+
+### Approach & Efficiency
+
+Time complexity: O(1) for search, insertion, and deletion
+Space complexity: 0(n)
