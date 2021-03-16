@@ -1,5 +1,5 @@
 import pytest
-from code_challenges.hashtable.hash_table import Hashtable
+from code_challenges.hashtable.hashtable import Hashtable
 
 # @pytest.mark.skip("pending")
 def test_create():
