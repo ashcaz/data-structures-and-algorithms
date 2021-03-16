@@ -35,14 +35,6 @@ class Hashtable:
         self._buckets = size * [None]
 
     def _hash(self, key):
-        # Will need to factor HT len
-        # Max index is HT len -1
-        # >= 0
-        # abc
-        # a = 97
-        # b = 98
-        # c = 99
-        # sum = 294
 
         sum = 0
 
@@ -56,7 +48,6 @@ class Hashtable:
         return index
 
     def set(self, key, value):
-        pass
         # Hash The key
         hashed_key_index = self._hash(key)
 
@@ -68,23 +59,24 @@ class Hashtable:
         self._buckets[hashed_key_index].add((key, value))
 
     def get(self, requested_key):
-        pass
         # Run our requested_key through the _hash method
+        hashed_key_index = self._hash(requested_key)
 
         # assign the bucket to temp variable with the hashed index
+        temp = self._buckets[hashed_key_index]
 
         # check if the index is empty or not
+        if not temp:
+            return None
 
         # assign something to the head of the linked list 'current'
+        current = temp.head
 
-        # (key, value) this is going to be the value of each LL
-        # current.data[0] = key
-        # current.date[1] = value
+        while current:
+            if current.data[0] == requested_key:
+                return current.data[1]
 
-        # does my key in the linked_list = requesting_key
-        # return the value
-
-        # current = current.next
+            current = current.next
 
     def contains(self, key):
 
