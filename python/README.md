@@ -523,3 +523,35 @@ Implement a Hashtable with the following methods:
 
 Time complexity: O(1) for search, insertion, and deletion
 Space complexity: 0(n)
+
+## CC-31: Repeated Words
+
+Find the first repeated word in a book
+
+### Challenge
+
+-   Write a function that accepts a lengthy string parameter.
+-   Without utilizing any of the built-in library methods available to your language, return the first word to occur more than once in that provided string.
+
+### Approach & Efficiency
+
+Time complexity: O(n) due to looping through the list of words
+Space complexity: 0(n) due to creating a list of words.
+
+![Whiteboard image](./assets/CC-31.png)
+
+## CC-32: Tree Intersection
+
+Find the common values in 2 binary trees
+
+### Challenge
+
+-   Write a function called `tree_intersection` that takes two binary tree parameters.
+-   Without utilizing any of the built-in library methods available to your language, return a set of values found in both trees.
+
+### Approach & Efficiency
+
+Time complexity: O(n) due to looping through the list of words
+Space complexity: 0(n) due to creating a list of words.
+
+![Whiteboard image](./assets/CC-32.png)
