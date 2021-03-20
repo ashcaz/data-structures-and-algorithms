@@ -484,7 +484,7 @@ Review the pseudocode below, then trace the algorithm by stepping through the pr
 Time complexity: O(n^2)
 Space complexity: 0(1)
 
-## CC-26: Merge Sort
+## CC-27: Merge Sort
 
 Link to [Blog](./code_challenges/merge_sort/BLOG.md) post
 
@@ -494,3 +494,64 @@ Review the pseudocode below, then trace the algorithm by stepping through the pr
 
 Time complexity: O(n log(n))
 Space complexity: 0(n)
+
+## CC-28: Quick Sort
+
+Link to [Blog](./code_challenges/quick_sort/BLOG.md) post
+
+Review the pseudocode below, then trace the algorithm by stepping through the process with the provided sample array. Document your explanation by creating a blog article that shows the step-by-step output after each iteration through some sort of visual.
+
+### Approach & Efficiency
+
+Time complexity: O(n^2)
+Space complexity: 0(log n)
+
+## CC-30: Hashtable Implementation
+
+Implement a Hashtable
+
+### Challenge
+
+Implement a Hashtable with the following methods:
+
+1. `add`: takes in both the key and value. This method should hash the key, and add the key and value pair to the table, handling collisions as needed.
+2. `get`: takes in the key and returns the value from the table.
+3. `contains`: takes in the key and returns a boolean, indicating if the key exists in the table already.
+4. `hash`: takes in an arbitrary key and returns an index in the collection.
+
+### Approach & Efficiency
+
+Time complexity: O(1) for search, insertion, and deletion
+Space complexity: 0(n)
+
+## CC-31: Repeated Words
+
+Find the first repeated word in a book
+
+### Challenge
+
+-   Write a function that accepts a lengthy string parameter.
+-   Without utilizing any of the built-in library methods available to your language, return the first word to occur more than once in that provided string.
+
+### Approach & Efficiency
+
+Time complexity: O(n) due to looping through the list of words
+Space complexity: 0(n) due to creating a list of words.
+
+![Whiteboard image](./assets/CC-31.png)
+
+## CC-32: Tree Intersection
+
+Find the common values in 2 binary trees
+
+### Challenge
+
+-   Write a function called `tree_intersection` that takes two binary tree parameters.
+-   Without utilizing any of the built-in library methods available to your language, return a set of values found in both trees.
+
+### Approach & Efficiency
+
+Time complexity: O(n) due to looping through the list of words
+Space complexity: 0(n) due to creating a list of words.
+
+![Whiteboard image](./assets/CC-32.png)
