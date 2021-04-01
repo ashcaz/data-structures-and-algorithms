@@ -32,19 +32,22 @@ class Graph:
 
         nodes = [*self._adjacency_list]
 
-        adjacencies = None
+        print(nodes)
 
         for i in range(len(nodes)):
             if nodes[i].value == node:
-                adjacencies = node[i]
+                adjacencies = self._adjacency_list[nodes[i]]
+
+                print(adjacencies)
+
+                adjacencies_with_weight = [
+                    adjacencies[i].vertex.value,
+                    adjacencies[i].weight,
+                ]
+
+                return adjacencies_with_weight
             else:
                 raise KeyError("The node you enteted does not exist")
-
-        adjacencies_with_weight = []
-
-        adjacencies_with_weight.append([adjacencies[i].vertex, adjacencies[i].weight])
-
-        return adjacencies_with_weight
 
     def size(self):
         return len(self._adjacency_list)

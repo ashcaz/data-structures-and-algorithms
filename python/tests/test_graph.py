@@ -66,14 +66,14 @@ def test_one_node_one_edge_end():
         graph.add_edge(a, b)
 
 
-@pytest.mark.skip("pending")
+# @pytest.mark.skip("pending")
 def test_get_neighbors():
     graph = Graph()
     a = graph.add_node("a")
     b = graph.add_node("b")
     graph.add_edge(a, b)
     actual = graph.get_neighbors("a")
-    expected = []
+    expected = ["b", 1]
     assert actual == expected
 
 
