@@ -93,3 +93,26 @@ def test_size_fail():
     expected = 3
     actual = graph.size()
     assert actual != expected
+
+
+def test_breadth_first(graph_one):
+    actual = graph_one.breadth_first("a")
+    expected = ["a", "b", "c", "d", "e"]
+    assert actual == expected
+
+
+@pytest.fixture
+def graph_one():
+    graph = Graph()
+    a = graph.add_node("a")
+    b = graph.add_node("b")
+    c = graph.add_node("c")
+    d = graph.add_node("d")
+    e = graph.add_node("e")
+    graph.add_edge(a, b)
+    graph.add_edge(b, c)
+    graph.add_edge(b, d)
+    graph.add_edge(c, e)
+    graph.add_edge(d, c)
+
+    return graph
