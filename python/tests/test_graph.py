@@ -53,7 +53,7 @@ def test_one_node_one_edge_start():
     a = graph.add_node("a")
     b = "b"
 
-    with pytest.raises(KeyError) as e:
+    with pytest.raises(KeyError):
         graph.add_edge(b, a)
 
 
