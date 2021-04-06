@@ -607,3 +607,48 @@ Implement a graph with the following methods:
 
 Time complexity: O(1) for add node, add edge
 Space complexity: 0(n)
+
+## CC-36: Breadth-First Traversal
+
+Implement a breadth-first traversal on a graph.
+
+### Challenge
+
+Extend your graph object with a breadth-first traversal method that accepts a starting node. Without utilizing any of the built-in methods available to your language, return a collection of nodes in the order they were visited. Display the collection.
+
+### Approach & Efficiency
+
+Time complexity: O(n) for add node, add edge
+Space complexity: 0(n)
+
+![Whiteboard image]()
+
+## CC-37: Get Edge
+
+Given a business trip itinerary, and an Alaska Airlines route map, is the trip possible with direct flights? If so, how much will the total trip cost be?
+
+### Challenge
+
+Write a function based on the specifications above, which takes in a graph, and an array of city names. Without utilizing any of the built-in methods available to your language, return whether the full trip is possible with direct flights, and how much it would cost.
+
+### Approach & Efficiency
+
+Time complexity: O(n)
+Space complexity: 0(n)
+
+![Whiteboard image]()
+
+## CC-38: Get Edge
+
+Conduct a depth first preorder traversal on a graph
+
+### Challenge
+
+Create a function that accepts an adjacency list as a graph, and conducts a depth first traversal. Without utilizing any of the built-in methods available to your language, return a collection of nodes in their pre-order depth-first traversal order.
+
+### Approach & Efficiency
+
+Time complexity: O(n)
+Space complexity: 0(n)
+
+![Whiteboard image](./assets/CC-38.png)

@@ -53,7 +53,17 @@ class Graph:
         return len(self._adjacency_list)
 
     def breadth_first(self, starting_node):
-        pass
+
+        nodes = [*self._adjacency_list]
+        return_list = []
+
+        for i in range(len(nodes)):
+            if nodes[i].value == starting_node:
+                adjacencies = self._adjacency_list[nodes[i]]
+                break
+
+            else:
+                raise KeyError("The node you enteted does not exist")
 
 
 class Vertex:
